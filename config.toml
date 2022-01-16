@@ -8,6 +8,8 @@ title = "Younger"
 # Change the default theme to be use when building the site with Hugo
 theme = "DoIt"
 
+staticDir = ['static']
+
 [params]
   # DoIt theme version
   version = "0.2.X"
