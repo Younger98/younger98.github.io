@@ -111,7 +111,7 @@ staticDir = ['static']
       [languages.en.params.search]
         enable = true
         # type of search engine ("lunr", "algolia")
-        type = "algolia"
+        type = "lunr"
         # max index length of the chunked content
         contentLength = 4000
         # placeholder of the search bar
@@ -142,7 +142,7 @@ staticDir = ['static']
           # title shown in home page (HTML format is supported)
           title = ""
           # subtitle shown in home page
-          subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+          subtitle = "IT工程宅日常，斜槓人生啟動中"
           # whether to use typeit animation for subtitle
           typeit = false
           # whether to show social links
@@ -219,9 +219,6 @@ staticDir = ['static']
         Bilibili = ""
         Email = "younger98@gmail.com"
         RSS = true
-        [languages.en.params.social.Mastodon]
-          id = "@xxxx"
-          prefix = "https://mastodon.technology/"
 
 [params]
   # DoIt theme version
@@ -290,7 +287,7 @@ staticDir = ['static']
   [params.search]
     enable = true
     # type of search engine ("lunr", "algolia", "fuse")
-    type = "fuse"
+    type = "lunr"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
