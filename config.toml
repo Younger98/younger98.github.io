@@ -266,7 +266,7 @@ staticDir = ['static']
   [params.search]
     enable = true
     # type of search engine ("lunr", "algolia", "fuse")
-    type = "fuse"
+    type = "algolia"
     # max index length of the chunked content
     contentLength = 4000
     # placeholder of the search bar
@@ -280,9 +280,11 @@ staticDir = ['static']
     # DoIt NEW | 0.2.4 whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "my_blog"
+      appID = "B5FCBT8AEJ"
+      searchKey = "6bdb7fd41f5a8aad85e9892b279720dc"
+      vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"] 
+      params = ["categories", "tags", "series"]
     [params.search.fuse]
       # DoIt NEW | 0.2.12 https://fusejs.io/api/options.html
       isCaseSensitive = false
@@ -294,7 +296,7 @@ staticDir = ['static']
       ignoreLocation = false
       useExtendedSearch = false
       ignoreFieldNorm = false
-      
+
   # Page config
   # 文章页面配置
   [params.page]
@@ -577,7 +579,13 @@ staticDir = ['static']
     noClasses = false
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON", "Algolia"]
+
+[outputFormats.Algolia]
+  baseName = "algolia"
+  isPlainText = true
+  mediaType = "application/json"
+  notAlternative = true
 
 
 # Author config
